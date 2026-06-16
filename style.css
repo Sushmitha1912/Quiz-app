@@ -1,0 +1,196 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.screen {
+  width: 100%;
+  max-width: 520px;
+}
+
+.hidden { display: none !important; }
+
+.card {
+  background: #1a1a2e;
+  border: 1px solid #16213e;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  text-align: center;
+  color: white;
+}
+
+/* Start Screen */
+.logo {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #00d4aa;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #a0aec0;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.badge-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+.badge {
+  background: #0d3b33;
+  color: #00d4aa;
+  border: 1px solid #00d4aa44;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Start button */
+#startBtn {
+  background: linear-gradient(135deg, #00d4aa, #0094ff);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.2s, transform 0.1s;
+  letter-spacing: 0.5px;
+}
+#startBtn:hover  { opacity: 0.9; }
+#startBtn:active { transform: scale(0.98); }
+
+/* Progress bar */
+.progress-bar {
+  background: #2d2d44;
+  border-radius: 99px;
+  height: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+#progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #00d4aa, #0094ff);
+  border-radius: 99px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+#questionCount {
+  font-size: 12px;
+  color: #718096;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  margin: 1rem 0 1.5rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Options */
+#options { display: flex; flex-direction: column; gap: 10px; }
+
+.option-btn {
+  background: #16213e;
+  color: #cbd5e0;
+  border: 1.5px solid #2d3748;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0;
+  width: 100%;
+}
+.option-btn:hover:not(:disabled) {
+  background: #1e3a5f;
+  border-color: #0094ff;
+  color: white;
+}
+.option-btn.correct {
+  background: #0d3b33;
+  border-color: #00d4aa;
+  color: #00d4aa;
+  font-weight: 600;
+}
+.option-btn.wrong {
+  background: #3b0d0d;
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+.option-btn:disabled { cursor: not-allowed; }
+
+/* Next button */
+#nextBtn {
+  background: linear-gradient(135deg, #00d4aa, #0094ff);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  width: 100%;
+  transition: opacity 0.2s, transform 0.1s;
+}
+#nextBtn:hover  { opacity: 0.9; }
+#nextBtn:active { transform: scale(0.98); }
+
+/* Result */
+#resultEmoji { font-size: 4rem; margin-bottom: 0.5rem; }
+#resultTitle { font-size: 1.5rem; color: #00d4aa; margin-bottom: 0.5rem; }
+#resultScore {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00d4aa, #0094ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.5rem 0;
+}
+#resultMsg { font-size: 0.9rem; color: #718096; margin-bottom: 0.5rem; }
+
+#restartBtn {
+  background: linear-gradient(135deg, #00d4aa, #0094ff);
+  color: white;
+  border: none;
+  padding: 13px 32px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  width: 100%;
+  transition: opacity 0.2s, transform 0.1s;
+}
+#restartBtn:hover  { opacity: 0.9; }
+#restartBtn:active { transform: scale(0.98); }

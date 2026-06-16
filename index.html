@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MERN Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Start Screen -->
+  <div class="screen" id="startScreen">
+    <div class="card">
+      <div class="logo">🧠</div>
+      <h1>MERN Quiz</h1>
+      <p class="subtitle">Test your MERN Stack knowledge with 10 questions!</p>
+      <div class="badge-row">
+        <span class="badge">MongoDB</span>
+        <span class="badge">Express</span>
+        <span class="badge">React</span>
+        <span class="badge">Node.js</span>
+      </div>
+      <button id="startBtn">Start Quiz →</button>
+    </div>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div class="screen hidden" id="quizScreen">
+    <div class="card">
+      <div class="progress-bar"><div id="progressFill"></div></div>
+      <p id="questionCount">Question 1 of 10</p>
+      <h2 id="questionText"></h2>
+      <div id="options"></div>
+      <button id="nextBtn" class="hidden">Next →</button>
+    </div>
+  </div>
+
+  <!-- Result Screen -->
+  <div class="screen hidden" id="resultScreen">
+    <div class="card">
+      <div id="resultEmoji"></div>
+      <h2 id="resultTitle"></h2>
+      <p id="resultScore"></p>
+      <p id="resultMsg"></p>
+      <button id="restartBtn">Play Again →</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
